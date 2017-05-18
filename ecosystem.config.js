@@ -34,7 +34,7 @@ module.exports = {
       // Commands to execute locally (on the same machine you deploy things)
       // Can be multiple commands separated by the character ";"
       "pre-deploy-local" : "echo 'This is a local executed command'",
-      "post-deploy" : "docker ps",
+      "post-deploy" : "docker exec -it hrmv3 bash && npm run build",
     },
     dev : {
       user : "apul",
