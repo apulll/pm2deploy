@@ -24,17 +24,15 @@ module.exports = {
    */
   deploy : {
     production : {
-      user : "www-dev",
-      password:"Dev0111",
-      host : "192.168.1.80",
+      user : "root",
+      host : "123.207.56.190",
       ref  : "origin/master",
-      repo : "ssh://git@gitlab.mila66.com:10022/Capul/web.git",
-      path : "/data0/web/pm2node",
+      repo : "git@github.com:apulll/pm2deploy.git",
+      path : "/www/web/pm2node",
       "post-setup": "ls -la",
       // Commands to execute locally (on the same machine you deploy things)
       // Can be multiple commands separated by the character ";"
-      "pre-deploy-local" : "echo 'This is a local executed command'",
-      "post-deploy" : "docker ps",
+      "pre-deploy-local" : "echo 'This is a local executed command'"
     },
     dev : {
       user : "apul",
